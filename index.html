@@ -1,54 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mohamed Abdalla | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   <header>
     <div class="container">
       <h1>Mohamed Abdalla</h1>
-      <p>Front-End Developer | AI Enthusiast | CS @ Cornell</p>
+      <p>Software Engineer | Front-End Developer | Cornell CS</p>
       <nav>
-        <a href="#projects">Projects</a>
         <a href="https://github.com/mja266" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/mohamed-abdalla-280924175/" target="_blank">LinkedIn</a>
+        <a href="mailto:mja266@cornell.edu">Email Me</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section id="projects">
-      <h2>Featured Projects</h2>
+  <main>
+    <div class="container">
+      <h2>Projects</h2>
 
-      <div class="card">
-        <h3>Blokus</h3>
-        <p>Text-based OCaml version of the board game. Designed board logic, piece placement, and turn-based gameplay.</p>
-        <a href="https://github.com/mja266/Blokus" target="_blank">View on GitHub</a>
+      <div class="card-grid">
+
+        <div class="card">
+          <h3>Blokus (OCaml)</h3>
+          <p>Text-based version of the board game Blokus built using functional programming concepts.</p>
+          <a href="https://github.com/mja266/Blokus" target="_blank">View Project</a>
+        </div>
+
+        <div class="card">
+          <h3>IOT Sauron</h3>
+          <p>Multi-camera real-time tracking system with face and color detection using OpenCV + Raspberry Pi.</p>
+          <a href="https://github.com/mja266/IOT" target="_blank">View Project</a>
+        </div>
+
+        <div class="card">
+          <h3>Space Invaders (Python)</h3>
+          <p>Basic version of the arcade game using object-oriented Python and Pygame for rendering.</p>
+          <a href="https://github.com/mja266/SpaceInvaders" target="_blank">View Project</a>
+        </div>
+
       </div>
-
-      <div class="card">
-        <h3>IoT Sauron Project</h3>
-        <p>Real-time Raspberry Pi surveillance system using OpenCV for color and face detection. Multi-camera vision + servo control.</p>
-        <a href="https://github.com/mja266/IOT" target="_blank">View on GitHub</a>
-      </div>
-
-      <div class="card">
-        <h3>COVID-19 Hospitalization Predictor</h3>
-        <p>Python ML model forecasting weekly trends with 79% accuracy. Led data preprocessing and model evaluation strategies.</p>
-        <a href="https://github.com/mja266/COVID19-Hospitalization-Prediction" target="_blank">View on GitHub</a>
-      </div>
-
-    </section>
+    </div>
   </main>
 
   <footer>
-    <p>Built with GitHub Pages</p>
+    <div class="container">
+      <p>© 2025 Mohamed Abdalla. All rights reserved.</p>
+    </div>
   </footer>
 </body>
-
 </html>
