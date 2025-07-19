@@ -6,13 +6,6 @@ body {
   color: #333;
 }
 
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
-}
-
 header {
   background-color: #1a73e8;
   color: white;
@@ -37,21 +30,47 @@ nav a {
   font-weight: bold;
 }
 
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
 main h2 {
   text-align: center;
+  margin-top: 50px;
   margin-bottom: 30px;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .card {
   background-color: white;
   padding: 20px;
-  margin: 20px 0;
+  width: 280px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card h3 {
   margin-top: 0;
+  color: #1a73e8;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .card a {
