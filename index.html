@@ -1,70 +1,54 @@
-/* style.css */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohamed Abdalla | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-header {
-  background-color: #1a73e8;
-  color: white;
-  padding: 40px 0;
-  text-align: center;
-}
+<body>
+  <header>
+    <div class="container">
+      <h1>Mohamed Abdalla</h1>
+      <p>Front-End Developer | AI Enthusiast | CS @ Cornell</p>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="https://github.com/mja266" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/mohamed-abdalla-280924175/" target="_blank">LinkedIn</a>
+      </nav>
+    </div>
+  </header>
 
-header h1 {
-  margin: 0;
-  font-size: 36px;
-}
+  <main class="container">
+    <section id="projects">
+      <h2>Featured Projects</h2>
 
-header p {
-  font-size: 18px;
-  margin: 10px 0;
-}
+      <div class="card">
+        <h3>Blokus</h3>
+        <p>Text-based OCaml version of the board game. Designed board logic, piece placement, and turn-based gameplay.</p>
+        <a href="https://github.com/mja266/Blokus" target="_blank">View on GitHub</a>
+      </div>
 
-nav a {
-  margin: 0 15px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
+      <div class="card">
+        <h3>IoT Sauron Project</h3>
+        <p>Real-time Raspberry Pi surveillance system using OpenCV for color and face detection. Multi-camera vision + servo control.</p>
+        <a href="https://github.com/mja266/IOT" target="_blank">View on GitHub</a>
+      </div>
 
-main h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
+      <div class="card">
+        <h3>COVID-19 Hospitalization Predictor</h3>
+        <p>Python ML model forecasting weekly trends with 79% accuracy. Led data preprocessing and model evaluation strategies.</p>
+        <a href="https://github.com/mja266/COVID19-Hospitalization-Prediction" target="_blank">View on GitHub</a>
+      </div>
 
-.card {
-  background-color: white;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
+    </section>
+  </main>
 
-.card h3 {
-  margin-top: 0;
-}
+  <footer>
+    <p>Built with GitHub Pages</p>
+  </footer>
+</body>
 
-.card a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #1a73e8;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #e0e0e0;
-  margin-top: 50px;
-}
+</html>
