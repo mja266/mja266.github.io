@@ -63,6 +63,27 @@
     h2{font:800 28px/1.2 Urbanist, Inter; margin:0 0 16px}
     p{margin:0 0 12px}
 
+    /* About section image + layout */
+    .about-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
+    .about-container img {
+      max-width: 220px;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      border: 2px solid var(--border);
+    }
+    @media(min-width:760px){
+      .about-container { flex-direction: row; text-align: left; }
+      .about-container img { max-width: 240px; }
+    }
+
     /* Cards grid */
     .grid{display:grid; gap:18px}
     @media(min-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -81,209 +102,4 @@
     /* Footer */
     footer{padding:60px 0 80px; border-top:1px solid var(--border); color:var(--muted); text-align:center}
 
-    /* Motion preference */
-    @media (prefers-reduced-motion: reduce) {
-      .btn:hover{transform:none}
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="wrap nav">
-      <div class="logo"><span class="dot"></span>Mohamed Abdalla</div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero wrap" aria-labelledby="intro-title">
-      <div>
-        <div class="tag">AI & Software Engineer • Cornell B.S. CS</div>
-        <h1 class="title" id="intro-title">Building intelligent systems that groove.</h1>
-        <p class="subtitle">Cornell-trained engineer with hands-on experience building real-time computer vision and predictive ML systems — ready to fuse cutting‑edge deep learning with a passion for music to redefine how artists create.</p>
-        <div class="tags" aria-label="focus areas">
-          <span class="tag">Diffusion & Transformers (learning)</span>
-          <span class="tag">Computer Vision</span>
-          <span class="tag">MLOps Mindset</span>
-          <span class="tag">Creative Tech</span>
-        </div>
-        <div class="cta">
-          <a class="btn primary" href="#projects" aria-label="Jump to Projects">View Projects</a>
-          <a class="btn" href="https://github.com/mja266" target="_blank" rel="noopener">GitHub ↗</a>
-          <a class="btn" href="https://www.linkedin.com/in/mohamed-abdalla-280924175/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        </div>
-      </div>
-      <div class="wave" aria-hidden="true">
-        <canvas id="waveCanvas" class="wave__canvas"></canvas>
-        <div class="wave__note">live waveform</div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="wrap">
-        <h2>About Me</h2>
-        <p>I'm Mohamed Abdalla, an AI & Software Engineer with a B.S. in Computer Science and a minor in ECE from Cornell University (Dean’s List, 4 semesters). I enjoy building practical ML systems and creative tools. I’ve shipped UI features during my Etsy internship, led an ML project forecasting COVID-19 hospitalizations, and built a real-time multi‑camera CV system on Raspberry Pi.</p>
-        <p>I'm excited by the intersection of <strong>music and AI</strong> — from expressive models that understand rhythm and timbre to tools that help artists ideate faster.</p>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="wrap">
-        <h2>Selected Projects</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>COVID‑19 Hospitalization Prediction</h3>
-            <small>ML • Time series • Model leadership</small>
-            <p>Led a cross‑functional effort to predict weekly hospitalization trends across countries. Standardized & one‑hot encoded features, performed Stratified Shuffle Split CV, and delivered <strong>79% test accuracy</strong>.</p>
-            <div class="stack">
-              <span class="chip">Python</span>
-              <span class="chip">Pandas</span>
-              <span class="chip">Scikit‑learn</span>
-              <span class="chip">Numpy</span>
-              <span class="chip">EDA</span>
-              <p><a href="https://github.com/mja266/COVID19-Hospitalization-Prediction" target="_blank" rel="noopener">View on GitHub ↗</a></p>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3>IOT Sauron — Real‑time CV Rig</h3>
-            <small>Computer Vision • Embedded • Streaming</small>
-            <p>Built face & color detection with OpenCV, driving servo‑mounted cameras via PD control and PWM for smooth tracking. Multi‑camera live stream accessible via browser.</p>
-            <div class="stack">
-              <span class="chip">Python</span>
-              <span class="chip">OpenCV</span>
-              <span class="chip">Raspberry Pi</span>
-              <span class="chip">PD Control</span>
-            </div>
-            <p><a href="https://github.com/mja266/IOTSauron" target="_blank" rel="noopener">View on GitHub ↗</a></p>
-          </article>
-
-          <article class="card">
-            <h3>Blokus — Functional Game (OCaml)</h3>
-            <small>Algorithms • FP • Teamwork</small>
-            <p>Text‑based Blokus clone using modular design (<em>Player</em>, <em>Game</em>, <em>Main</em> modules) and functional abstractions for move validation and board updates.</p>
-            <div class="stack">
-              <span class="chip">OCaml</span>
-              <span class="chip">Algorithms</span>
-              <span class="chip">Functional Programming</span>
-              <span class="chip">Testing</span>
-            </div>
-            <p><a href="https://github.com/mja266/Blokus" target="_blank" rel="noopener">View on GitHub ↗</a></p>
-          </article>
-
-          <article class="card">
-            <h3>Etsy Seller UI Improvements</h3>
-            <small>Frontend • UX • Impact</small>
-            <p>Enhanced seller workflows in React + TypeScript during internship. Contributed ideas during standups and helped resolve UI issues to reduce friction for sellers.</p>
-            <div class="stack">
-              <span class="chip">React</span>
-              <span class="chip">TypeScript</span>
-              <span class="chip">UX</span>
-              <span class="chip">Agile</span>
-              <span class="chip">HTML5</span>
-              <span class="chip">PHP</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="wrap">
-        <h2>Skills</h2>
-        <div class="skills">
-          <div class="skill">Python</div>
-          <div class="skill">Java</div>
-          <div class="skill">C/C++</div>
-          <div class="skill">JavaScript/TypeScript</div>
-          <div class="skill">React</div>
-          <div class="skill">OpenCV</div>
-          <div class="skill">SQL</div>
-          <div class="skill">MLOps Mindset</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="wrap">
-        <h2>Contact</h2>
-        <p><strong>Email:</strong> <a href="mailto:mja266@cornell.edu">mja266@cornell.edu</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/mja266" target="_blank" rel="noopener">github.com/mja266</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mohamed-abdalla-280924175/" target="_blank" rel="noopener">linkedin.com/in/mohamed-abdalla-280924175</a></p>
-        <p><small>U.S. & Canadian Citizen • Open to remote.</small></p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">© <span id="year"></span> Mohamed Abdalla</div>
-  </footer>
-
-  <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Animated audio-like waveform on canvas
-    const canvas = document.getElementById('waveCanvas');
-    const ctx = canvas.getContext('2d');
-    let dpr = Math.max(1, window.devicePixelRatio || 1);
-    let t = 0;
-
-    function resize(){
-      const rect = canvas.parentElement.getBoundingClientRect();
-      canvas.width = Math.floor(rect.width * dpr);
-      canvas.height = Math.floor(rect.height * dpr);
-    }
-    resize();
-    window.addEventListener('resize', resize);
-
-    const waves = [
-      { amp: 16, freq: 0.010, speed: 0.018, color: 'rgba(245,200,75,0.65)' }, // gold
-      { amp: 10, freq: 0.018, speed: 0.022, color: 'rgba(142,197,255,0.55)' }, // cyan
-      { amp: 6,  freq: 0.026, speed: 0.028, color: 'rgba(255,255,255,0.35)' }  // white
-    ];
-
-    function draw(){
-      const w = canvas.width, h = canvas.height;
-      ctx.clearRect(0,0,w,h);
-      const mid = h * 0.62;
-      waves.forEach((wv, idx)=>{
-        ctx.beginPath();
-        for(let x=0; x<w; x++){
-          const progress = x / w;
-          const y = mid + Math.sin(x * wv.freq + t * (1 + idx*0.2)) * (wv.amp * dpr) * (0.5 + 0.5*Math.cos(progress * Math.PI));
-          if(x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
-        }
-        ctx.strokeStyle = wv.color;
-        ctx.lineWidth = 2 * dpr;
-        ctx.shadowColor = wv.color;
-        ctx.shadowBlur = 8 * dpr;
-        ctx.stroke();
-      });
-      t += 0.8; // tempo
-      requestAnimationFrame(draw);
-    }
-
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if(!mediaQuery.matches){
-      requestAnimationFrame(draw);
-    } else {
-      // Draw a static wave if reduced motion
-      const w = canvas.width, h = canvas.height, mid = h*0.62;
-      ctx.beginPath();
-      for(let x=0; x<w; x++){
-        const y = mid + Math.sin(x * 0.02) * 8 * dpr;
-        if(x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
-      }
-      ctx.strokeStyle = 'rgba(245,200,75,0.65)';
-      ctx.lineWidth = 2 * dpr;
-      ctx.stroke();
-    }
-  </script>
-</body>
-</html>
+    /* Motion preference*
