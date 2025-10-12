@@ -14,8 +14,8 @@
       --bg-2:#0f1117;
       --fg:#eaeef5;
       --muted:#9aa3b2;
-      --brand:#f5c84b; /* gold */
-      --accent:#8ec5ff; /* soft cyan for hover */
+      --brand:#f5c84b;
+      --accent:#8ec5ff;
       --card:#121522;
       --border:rgba(255,255,255,0.08);
       --shadow:0 8px 24px rgba(0,0,0,0.45), 0 2px 8px rgba(0,0,0,0.35);
@@ -35,8 +35,6 @@
     a { color:var(--fg); text-decoration:none }
     a:hover { color:var(--accent) }
     .wrap { max-width:var(--maxw); margin:0 auto; padding:0 20px }
-
-    /* Nav */
     header {
       position:sticky;
       top:0;
@@ -50,113 +48,39 @@
     .logo .dot { width:10px; height:10px; border-radius:50%; background:var(--brand); box-shadow:0 0 18px rgba(245,200,75,0.8) }
     nav a { margin-left:18px; font-weight:500; color:var(--muted) }
     nav a:hover { color:var(--fg) }
-
-    /* Hero */
     .hero { position:relative; padding:80px 0 40px }
     .title { font:800 44px/1.1 Urbanist, Inter, system-ui; margin:10px 0 16px }
     .subtitle { font-weight:500; color:var(--muted); max-width:720px }
     .tags { display:flex; flex-wrap:wrap; gap:10px; margin:24px 0 }
-    .tag {
-      border:1px solid var(--border);
-      padding:8px 12px;
-      border-radius:999px;
-      color:var(--muted);
-      font-weight:600;
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01))
-    }
+    .tag { border:1px solid var(--border); padding:8px 12px; border-radius:999px; color:var(--muted); font-weight:600; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)) }
     .cta { display:flex; gap:14px; margin-top:28px }
-    .btn {
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:12px 16px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background:var(--card);
-      box-shadow:var(--shadow);
-      font-weight:700
-    }
-    .btn.primary {
-      background:linear-gradient(180deg, rgba(245,200,75,0.22), rgba(245,200,75,0.12));
-      border-color:rgba(245,200,75,0.35);
-      color:#1a1a1a
-    }
+    .btn { display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:12px; border:1px solid var(--border); background:var(--card); box-shadow:var(--shadow); font-weight:700 }
+    .btn.primary { background:linear-gradient(180deg, rgba(245,200,75,0.22), rgba(245,200,75,0.12)); border-color:rgba(245,200,75,0.35); color:#1a1a1a }
     .btn.primary:hover { filter:brightness(1.05) }
     .btn:hover { transform:translateY(-1px) }
-
-    /* Waveform Canvas */
-    .wave { position:absolute; inset:auto 0 0 0; height:160px; pointer-events:none }
-    .wave__canvas { width:100%; height:100%; display:block; opacity:0.9; mix-blend:screen }
-    .wave__note { position:absolute; right:6%; bottom:90px; font:700 12px Inter; color:var(--muted) }
-
-    /* Sections */
     section { padding:64px 0; border-top:1px solid var(--border) }
     h2 { font:800 28px/1.2 Urbanist, Inter; margin:0 0 16px }
     p { margin:0 0 12px }
-
-    /* About section image + layout */
-    .about-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 20px;
-    }
-    .about-container img {
-      max-width: 220px;
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      border: 2px solid var(--border);
-    }
-    @media(min-width:760px){
-      .about-container { flex-direction: row; text-align: left; }
-      .about-container img { max-width: 240px; }
-    }
-
-    /* Cards grid */
+    .about-container { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; }
+    .about-container img { max-width: 220px; width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow); border: 2px solid var(--border); }
+    @media(min-width:760px){.about-container { flex-direction: row; text-align: left; }.about-container img { max-width: 240px; }}
     .grid { display:grid; gap:18px }
     @media(min-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-
-    .card {
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:20px;
-      box-shadow:var(--shadow)
-    }
+    .card { background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid var(--border); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow) }
     .card h3 { margin:0 0 8px; font:700 20px Urbanist, Inter }
     .card small { color:var(--muted) }
     .stack { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px }
     .chip { border:1px dashed rgba(255,255,255,0.15); padding:6px 10px; border-radius:999px; font-size:13px; color:var(--muted) }
-
-    /* Skills */
     .skills { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px }
     @media(min-width:760px){.skills{grid-template-columns:repeat(4,minmax(0,1fr))}}
-    .skill {
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border:1px solid var(--border);
-      border-radius:12px;
-      padding:12px;
-      text-align:center;
-      font-weight:600;
-      color:var(--muted)
-    }
-
-    /* Footer */
+    .skill { background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid var(--border); border-radius:12px; padding:12px; text-align:center; font-weight:600; color:var(--muted) }
     footer { padding:60px 0 80px; border-top:1px solid var(--border); color:var(--muted); text-align:center }
-
-    /* Motion preference */
-    @media (prefers-reduced-motion: reduce) {
-      .btn:hover{transform:none}
-    }
   </style>
 </head>
 <body>
   <div class="top-github">
-  <a href="https://github.com/mja266" target="_blank" rel="noopener">⭐ github.com/mja266</a>
-</div>
+    <a href="https://github.com/mja266" target="_blank" rel="noopener">⭐ github.com/mja266</a>
+  </div>
 
   <header>
     <div class="wrap nav">
@@ -176,7 +100,7 @@
         <div class="tag">AI & Software Engineer • Cornell B.S. CS</div>
         <h1 class="title" id="intro-title">Building intelligent systems</h1>
         <p class="subtitle">
-          Cornell-trained AI & Software Engineer with hands-on experience in real-time computer vision and predictive ML systems — committed to building scalable, high-impact solutions with deep learning. to redefine how artists create.
+          Cornell-trained AI & Software Engineer with hands-on experience in real-time computer vision and predictive ML systems — committed to building scalable, high-impact solutions with deep learning.
         </p>
         <div class="tags" aria-label="focus areas">
           <span class="tag">Diffusion & Transformers (learning)</span>
@@ -185,14 +109,10 @@
           <span class="tag">Creative Tech</span>
         </div>
         <div class="cta">
-          <a class="btn primary" href="#projects" target="_blank" rel="noopener">View Projects</a>
+          <a class="btn primary" href="#projects">View Projects</a>
           <a class="btn" href="https://github.com/mja266" target="_blank" rel="noopener">GitHub ↗</a>
           <a class="btn" href="https://www.linkedin.com/in/mohamed-abdalla-280924175/" target="_blank" rel="noopener">LinkedIn ↗</a>
         </div>
-      </div>
-      <div class="wave" aria-hidden="true">
-        <canvas id="waveCanvas" class="wave__canvas"></canvas>
-        <div class="wave__note">live waveform</div>
       </div>
     </section>
 
@@ -217,6 +137,24 @@
       <div class="wrap">
         <h2>Projects</h2>
         <div class="grid">
+
+          <article class="card">
+            <h3>NBA Shot Predictor</h3>
+            <small>Full Stack • ML • Flask Web App</small>
+            <p>
+              End-to-end machine learning system that predicts whether an NBA shot will be made or missed based on real 2024–25 season data. Features a Flask backend with a LightGBM model trained on 50,000+ shots and an interactive web UI for team and player simulation.
+            </p>
+            <div class="stack">
+              <span class="chip">Python</span>
+              <span class="chip">Flask</span>
+              <span class="chip">LightGBM</span>
+              <span class="chip">Pandas</span>
+              <span class="chip">HTML/CSS/JS</span>
+              <span class="chip">Machine Learning</span>
+            </div>
+            <p><a href="https://github.com/mja266/NBA-Shot-Predictor" target="_blank" rel="noopener">View on GitHub ↗</a></p>
+          </article>
+
           <article class="card">
             <h3>COVID-19 Hospitalization Prediction</h3>
             <small>ML • Time series • Model leadership</small>
@@ -278,6 +216,7 @@
               <span class="chip">PHP</span>
             </div>
           </article>
+
         </div>
       </div>
     </section>
@@ -314,65 +253,7 @@
   </footer>
 
   <script>
-    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Animated audio-like waveform on canvas
-    const canvas = document.getElementById('waveCanvas');
-    const ctx = canvas.getContext('2d');
-    let dpr = Math.max(1, window.devicePixelRatio || 1);
-    let t = 0;
-
-    function resize() {
-      const rect = canvas.parentElement.getBoundingClientRect();
-      canvas.width = Math.floor(rect.width * dpr);
-      canvas.height = Math.floor(rect.height * dpr);
-    }
-    resize();
-    window.addEventListener('resize', resize);
-
-    const waves = [
-      { amp: 16, freq: 0.010, speed: 0.018, color: 'rgba(245,200,75,0.65)' }, // gold
-      { amp: 10, freq: 0.018, speed: 0.022, color: 'rgba(142,197,255,0.55)' }, // cyan
-      { amp: 6, freq: 0.026, speed: 0.028, color: 'rgba(255,255,255,0.35)' }  // white
-    ];
-
-    function draw() {
-      const w = canvas.width, h = canvas.height;
-      ctx.clearRect(0,0,w,h);
-      const mid = h * 0.62;
-      waves.forEach((wv, idx)=>{
-        ctx.beginPath();
-        for(let x=0; x<w; x++){
-          const progress = x / w;
-          const y = mid + Math.sin(x * wv.freq + t * (1 + idx*0.2)) * (wv.amp * dpr) * (0.5 + 0.5*Math.cos(progress * Math.PI));
-          if(x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
-        }
-        ctx.strokeStyle = wv.color;
-        ctx.lineWidth = 2 * dpr;
-        ctx.shadowColor = wv.color;
-        ctx.shadowBlur = 8 * dpr;
-        ctx.stroke();
-      });
-      t += 0.8; // tempo
-      requestAnimationFrame(draw);
-    }
-
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if(!mediaQuery.matches){
-      requestAnimationFrame(draw);
-    } else {
-      // Draw a static wave if reduced motion
-      const w = canvas.width, h = canvas.height, mid = h*0.62;
-      ctx.beginPath();
-      for(let x=0; x<w; x++){
-        const y = mid + Math.sin(x * 0.02) * 8 * dpr;
-        if(x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
-      }
-      ctx.strokeStyle = 'rgba(245,200,75,0.65)';
-      ctx.lineWidth = 2 * dpr;
-      ctx.stroke();
-    }
   </script>
 </body>
 </html>
